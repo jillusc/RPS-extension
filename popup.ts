@@ -90,19 +90,31 @@ function gameEnd() {
   if (playerScore === maxScore) {
     winnerText = "You won! Hurrah!";
   } else {
-    winnerText = "Sorry! The computer won!";
+    winnerText = "Sorry!<br>The computer won!";
   }
-  alert(winnerText);
 
-  const playAgain = confirm("Play again?");
-  if (playAgain) {
+  const overlay = document.getElementById("modal-overlay");
+  const message = document.getElementById("modal-message");
+  const restartBtn = document.getElementById("modal-restart");
+
+  if (!overlay || !message || !restartBtn) return;
+
+  message.innerHTML = winnerText;
+  overlay.style.display = "flex";
+  overlay.classList.add("show");
+
+  restartBtn.onclick = () => {
     playerScore = 0;
     computerScore = 0;
-    (document.getElementById("scores") as HTMLElement).textContent =
-      playerScore.toString();
-    (document.getElementById("losses") as HTMLElement).textContent =
-      computerScore.toString();
+    scoresElement.textContent = "0";
+    lossesElement.textContent = "0";
+
     playerChoiceImg.src = "assets/images/blank.webp";
     computerChoiceImg.src = "assets/images/blank.webp";
-  }
+
+    overlay.classList.remove("show");
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 250); // wait for fade-out to finish
+  };
 }

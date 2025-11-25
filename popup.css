@@ -117,4 +117,53 @@ p {
   justify-content: space-between;
 }
 
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* hidden at first */
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  height: auto;
+  text-align: center;
+  border: 2px solid #410387;
+}
+
+#modal-message {
+  display: block;
+  white-space: normal;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #410387;
+}
+
+#modal-restart {
+  background: #410387;
+  font-family: "Futura", "Century Gothic", "Trebuchet MS", sans-serif;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#modal-overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease; /* fade animation */
+}
+
+#modal-overlay.show {
+  opacity: 1;
+}
+
 /* NO media queries needed */
