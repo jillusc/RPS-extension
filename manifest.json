@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ROCKPAPERSCISSORS!",
+  "version": "1.0.0",
+  "description": "A simple, classic rock-paper-scissors game in a browser extension popup.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ROCKPAPERSCISSORS!"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/images/*.webp",
+        "assets/images/*.jpg",
+        "assets/images/*.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
