@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS!</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="assets/images/logo.webp"
+        width="72px"
+        height="42px"
+        alt="logo"
+      />
+      <h1>ROCKPAPERSCISSORS!</h1>
+    </header>
+
+    <main>
+      <div id="main-outer-div">
+        <div id="player-buttons">
+          <button class="btn-choices" aria-label="rock">
+            <img src="assets/images/btn-rock.jpg" data-type="rock" alt="rock" />
+          </button>
+
+          <button class="btn-choices" aria-label="paper">
+            <img
+              src="assets/images/btn-paper.jpg"
+              data-type="paper"
+              alt="paper"
+            />
+          </button>
+
+          <button class="btn-choices" aria-label="scissors">
+            <img
+              src="assets/images/btn-scissors.jpg"
+              data-type="scissors"
+              alt="scissors"
+            />
+          </button>
+        </div>
+
+        <div id="right-column">
+          <div id="game-area">
+            <div id="play-area">
+              <div id="player-go">
+                <p>Player</p>
+                <img id="player-choice-img" src="assets/images/blank.webp" />
+              </div>
+
+              <div id="computer-go">
+                <p>Computer</p>
+                <img id="computer-choice-img" src="assets/images/blank.webp" />
+              </div>
+            </div>
+          </div>
+
+          <div id="score-area">
+            <p>WINS &nbsp; <span id="scores">0</span></p>
+            <p>LOSSES &nbsp;<span id="losses">0</span></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="dist/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Sigmar&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+  font-family: "Sigmar", sans-serif;
+  color: #410387;
+  text-align: center;
+  width: 380px; /* popup width */
+  overflow-x: hidden; /* prevent sideways scrolling */
+  padding-bottom: 12px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+/* MAIN AREA WRAPPER */
+#main-outer-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+/* BUTTONS COLUMN */
+#player-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-choices {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn-choices img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* GAME AREA - aqua box */
+#game-area {
+  background-color: #7bf9d7;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 240px;
+  height: 180px;
+  padding: 10px;
+}
+
+#play-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+#player-go,
+#computer-go {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#player-choice-img,
+#computer-choice-img {
+  width: 80%;
+}
+
+#right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* SCORE AREA - indigo box */
+#score-area {
+  background-color: #410387;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  width: 85%;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* NO media queries needed */
