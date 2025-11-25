@@ -34,9 +34,12 @@ const lossesElement = document.getElementById("losses");
 // we add null to the type to appease TS:
 function runGame(playerChoice) {
     showPlayerChoiceImage(playerChoice);
-    const computerChoice = getComputerChoice();
-    const winner = ascertainWinner(playerChoice, computerChoice);
-    incrementScores(winner);
+    // delay by 300ms:
+    setTimeout(() => {
+        const computerChoice = getComputerChoice();
+        const winner = ascertainWinner(playerChoice, computerChoice);
+        incrementScores(winner);
+    }, 300);
 }
 /* Display the player's choice of R, P or S */
 function showPlayerChoiceImage(playerChoice) {
